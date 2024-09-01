@@ -4,14 +4,6 @@ import matplotlib.colors as colors
 import matplotlib.colors as mlc
 import string
 from matplotlib.patches import Patch
-##markers
-# x = [5]
-# y = [6]
-
-# plt.plot(x, y, linestyle='None', marker='o')
-
-# plt.show()
-
 
 def draw_graph():
     global mine, img , x_coord, y_coord, value, im, fig
@@ -41,7 +33,6 @@ def draw_graph():
     im = ax.imshow(img, cmap=cmap, norm =  norm)
 
     # Show all ticks and label them with the respective list entries
-    ax.spines[:].set_visible(False)
     ax.set_xticks(np.arange(len(x_axis)), labels=x_axis)
     ax.set_yticks(np.arange(len(y_axis)), labels=y_axis)
     ax.set_xticks(np.arange(len(x_axis))-.5, minor=True)
