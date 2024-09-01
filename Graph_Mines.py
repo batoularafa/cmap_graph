@@ -61,9 +61,9 @@ def update_mine():
     y_mine = 19 - int(y_mine)
     mine[y_mine][x_mine] = int(value) #x and y are inverted
 
-    x_robot, y_robot = input("enter robot coordinates(char, int):").split(',')
-    x_robot = ord(x_robot) - 65
-    y_robot = 19 - int(y_robot)
+    # x_robot, y_robot = input("enter robot coordinates(char, int):").split(',')
+    # x_robot = ord(x_robot) - 65
+    # y_robot = 19 - int(y_robot)
     
     for i in range(19):
         for j in range(19):
@@ -73,7 +73,7 @@ def update_mine():
                 img[i][j]=1.0 # (second color) >> dark blue
             else:
                 img[i][j]=2.0  # (third color)
-    plt.plot(x_robot,y_robot, linestyle='None', marker = 'o')
+    # plt.plot(x_robot,y_robot, linestyle='None', marker = 'o')
     im.set_data(img) # update the data of the img array 
     fig.canvas.draw_idle #redraw the graph
 
